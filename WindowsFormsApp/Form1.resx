@@ -57,4 +57,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnECommercePanel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACwwAAAsMAT9AIsgAAAAHdElNRQfnCA8RFCM+q7VtAAAB
+        8klEQVRIS92VQUsVURiGr1oKJvgfhDaCm6CF1c4EhaAMXLQPItTAf5ArA3cthBbiQi1okf8hwZ2bSgJF
+        QvsDIUYS5Ol5z3nvnZk7dxyD3PjAy8x5v/fMx8y930zjahNCuIYeoLfoE/qBTtBXtI6m0XXH/w023kff
+        UB376JG3XQw2vEJn2l3DFx+F9nT7EtUQWojxeo5QN5pBv2TAoi/TGQJTKVeLLj7hbdo3hk5VgIe2i1Do
+        RYcxUs0dx0tQ052IPVT+4TGfxPI5ONoRynpcn2MwhMe2MzDfp1olW45WQmYuRcOarQzMg1QLGz7muevY
+        uZAbTvGwaysD8zjVwiB6mU5b3HOsAL7mZAl1ed2PxHEM5MHUhIoBr9ubNGk9Kq/FMoozwHELfYyBPJga
+        fzFsq7KJy/kGYhX1uFSG4kqM8UPZirAuNXGpvYF4hzq/myhMxkga/8LIJzvDdqcGYhP1OZKB2YV2lIBZ
+        2xHW35OdsF3VQDx3pAiF2+g30tiP25avu2s1sZ1voD3ig0vVEHqG9CZVkxeo9bg4j3iptXKv0bx8+INu
+        ulwNoaeo+fLaRWo0ElfgmHKjPmp2mnO0HIt1ELyFtuOWNhwpgK07ET/RDdv1ENaX7Q3SnGgYy0ME+ENI
+        n1S9cnpt/1+48AAq/0Uvj0bjLzGN7aoC70RdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnSetSalePanel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACwwAAAsMAT9AIsgAAAAHdElNRQfnCA8RFCM+q7VtAAAC
+        Z0lEQVRIS52Vy05UQRBAR/GB+ECiiLr2sfMj/ACCT3awU3Tr0o0LY2J8RI3uSXwkJnyA+gcmookuFYGt
+        boAfGM+56bqpGS7jzHRyMtPV1d1V1VV1W02j3W4PRd8jbdoLJ+EY7C4y8b8y19Sp5H2NUIaj8BB+wTd4
+        DpcK/v8Krj2AI9DfJaEIt2EL3sBr+A1/C6ug/C1swE0Y+IIb8BQOg2E4C1cK/leml5/gCxiuev+OIynt
+        g/1pvhOzoBeP4FSR1XRMhmQMnoGXLMMtGIdqPZRG4AKcLvPMQTgOOYvEh50H9x2Aa/ABNsGHr7IrlCfh
+        M9wt88DDX4GWXSwyOQSGRKvniky03MdfgepNYsGc9pD3kOOu5codC6DMS01fM+wx1CkKe2ARvoNG1xfo
+        vnFcAzMky7Xcw91gvPPhehK6cga0Xq8Ne8cjX4Y/MJNkmf8dLp5hnfhbyfKiFeqieZ7l0h0W5906ss3I
+        WDAUL8BqzSGSpsNPgGEzfDm7zsM6PIFdymLBx7Tf2BLq5gVWcVNYPNxhBbs39EdhCczICWWxYErZuOwt
+        dZGAKRhVmmOu5R7+EnybkMs03IMqjCHUaovDIvkI18HisYgsppyKYli0PA53f3jumula6cYG0XLL3LzX
+        atPWS7JOE3p2HwxbFfdMx6RguKJK9aRJJ6OOnt8JWeOIxYKXGGNbsS1Z98/BVTAVLSjDoNeGVK/rTtpz
+        hBL4EdGyd+Dj+5GJD47VaktQrk60kXJKjxGK4MP68D9BC30TC0gPbAU/wLoZ7JPpCGUwNFPQ/dG3z9ib
+        DGVkT9ndx4gNg7J9tFr/ADG5GQX25F9+AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnProductCrudPanel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACwwAAAsMAT9AIsgAAAAHdElNRQfnCA8RFCM+q7VtAAAA
+        4ElEQVRIS+2SzYnCUBRGgztBpxBdWYB2MwP24NYuREvQnSXYghW4mIGpYCCeE278CcLw8rIKHjjw7n3J
+        d5OXFP2gLMvaQUdWeTeiMcUdnjLd4gQjHSxwjV1hVqSDBW7c6QizIh0scI5L/MrUDLMiHSzCIX7guKXe
+        a0aV9wQNv/4Rf/Gnpd5rxiBi79hE/4JczEgacMEVfmJ9zq7tudckecAZZzjC+qxd23OvSfKAP/Rsv7E+
+        a9f23GuSPCCV94B/6fmAg1dksseXA3SBDvEp2mi4GZH6gM3QN8mxyukLRXEFhNrf7HckA4QAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="btnMainMenuPanel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAPpJREFUSEvtzTFqAlEUheHRQmwD1oONpaSIW7DLKuyyC7fgHuxchGCwTGujlYip
+        JV0IjOfp74Pxes04TqcfnOadM3eSx5FlWap8kZTnauhgV1krJ1vljfo+OtRXduHqmR/lnVk5OjBQfsM1
+        x5/ywbw4fVRThuFCQSOlzufXadhQxuGrG02UJmcu0+BFmYZ1SXOlxbk8FW1lEVZ3Wiodzh7p4VXZhLYi
+        30qP84cfrA7P1VpyPo+yNM742JXGGR87gzri2aD2sTOoI54Nah87gzri2aD2sTOoI54Nah87gzri2aD2
+        sTOoI54Nap82n8dpzow60luh3dM/kmQPZGnoi+HyRYsAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

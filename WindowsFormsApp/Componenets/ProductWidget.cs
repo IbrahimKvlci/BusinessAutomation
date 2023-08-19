@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp.Forms
+namespace WindowsFormsApp.Componenets
 {
-    public partial class ProductCrudForm : Form
+    public partial class ProductWidget : UserControl
     {
-        public ProductCrudForm()
+        public ProductWidget()
         {
             InitializeComponent();
-        }
-
-        private void btnAddPCF_Click(object sender, EventArgs e)
-        {
-            ProductAdd productAdd = new ProductAdd();
-            productAdd.Show();
         }
     }
 }

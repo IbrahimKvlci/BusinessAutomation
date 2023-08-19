@@ -16,5 +16,25 @@ namespace WindowsFormsApp.Forms
         {
             InitializeComponent();
         }
+
+        private void lblBarcode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

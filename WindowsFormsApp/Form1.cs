@@ -48,5 +48,10 @@ namespace WindowsFormsApp
             ECommerceForm eCommerceForm = new ECommerceForm();
             getForm(eCommerceForm,pnlMain);
         }
+
+        private void pnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

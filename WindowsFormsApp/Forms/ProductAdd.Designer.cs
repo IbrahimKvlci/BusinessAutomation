@@ -49,6 +49,11 @@
             // nbStockMMF
             // 
             this.nbStockMMF.Location = new System.Drawing.Point(718, 301);
+            this.nbStockMMF.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nbStockMMF.Name = "nbStockMMF";
             this.nbStockMMF.Size = new System.Drawing.Size(149, 23);
             this.nbStockMMF.TabIndex = 30;
@@ -56,6 +61,11 @@
             // nbPriceMMF
             // 
             this.nbPriceMMF.Location = new System.Drawing.Point(718, 255);
+            this.nbPriceMMF.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nbPriceMMF.Name = "nbPriceMMF";
             this.nbPriceMMF.Size = new System.Drawing.Size(149, 23);
             this.nbPriceMMF.TabIndex = 29;

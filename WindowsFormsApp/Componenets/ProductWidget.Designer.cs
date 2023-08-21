@@ -55,6 +55,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(219, 301);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnUpdateProduct
             // 
@@ -77,27 +78,31 @@
             // lblPriceProduct
             // 
             this.lblPriceProduct.AutoSize = true;
+            this.lblPriceProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPriceProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(95)))), ((int)(((byte)(0)))));
             this.lblPriceProduct.Location = new System.Drawing.Point(164, 227);
             this.lblPriceProduct.Name = "lblPriceProduct";
-            this.lblPriceProduct.Size = new System.Drawing.Size(33, 15);
+            this.lblPriceProduct.Size = new System.Drawing.Size(35, 15);
             this.lblPriceProduct.TabIndex = 4;
             this.lblPriceProduct.Text = "Price";
             // 
             // lblBrandProduct
             // 
             this.lblBrandProduct.AutoSize = true;
+            this.lblBrandProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblBrandProduct.Location = new System.Drawing.Point(3, 227);
             this.lblBrandProduct.Name = "lblBrandProduct";
-            this.lblBrandProduct.Size = new System.Drawing.Size(38, 15);
+            this.lblBrandProduct.Size = new System.Drawing.Size(40, 15);
             this.lblBrandProduct.TabIndex = 3;
             this.lblBrandProduct.Text = "Brand";
             // 
             // lblCategoryProduct
             // 
             this.lblCategoryProduct.AutoSize = true;
+            this.lblCategoryProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCategoryProduct.Location = new System.Drawing.Point(3, 197);
             this.lblCategoryProduct.Name = "lblCategoryProduct";
-            this.lblCategoryProduct.Size = new System.Drawing.Size(55, 15);
+            this.lblCategoryProduct.Size = new System.Drawing.Size(57, 15);
             this.lblCategoryProduct.TabIndex = 2;
             this.lblCategoryProduct.Text = "Category";
             // 
@@ -115,9 +120,11 @@
             // 
             // pbxImageProduct
             // 
+            this.pbxImageProduct.AccessibleName = "deneme";
             this.pbxImageProduct.Location = new System.Drawing.Point(3, 3);
             this.pbxImageProduct.Name = "pbxImageProduct";
             this.pbxImageProduct.Size = new System.Drawing.Size(213, 141);
+            this.pbxImageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImageProduct.TabIndex = 0;
             this.pbxImageProduct.TabStop = false;
             // 

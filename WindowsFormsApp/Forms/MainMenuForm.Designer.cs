@@ -44,6 +44,7 @@
             this.nbStockMMF = new System.Windows.Forms.NumericUpDown();
             this.btnDeleteMMF = new System.Windows.Forms.Button();
             this.btnUpdateMMF = new System.Windows.Forms.Button();
+            this.lblProductInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImageMMF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbPriceMMF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbStockMMF)).BeginInit();
@@ -66,6 +67,7 @@
             this.pbxImageMMF.Location = new System.Drawing.Point(12, 131);
             this.pbxImageMMF.Name = "pbxImageMMF";
             this.pbxImageMMF.Size = new System.Drawing.Size(207, 211);
+            this.pbxImageMMF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImageMMF.TabIndex = 2;
             this.pbxImageMMF.TabStop = false;
             // 
@@ -117,6 +119,7 @@
             this.tbxBarkodMMF.Name = "tbxBarkodMMF";
             this.tbxBarkodMMF.Size = new System.Drawing.Size(756, 23);
             this.tbxBarkodMMF.TabIndex = 9;
+            this.tbxBarkodMMF.TextChanged += new System.EventHandler(this.tbxBarkodMMF_TextChanged);
             // 
             // label1
             // 
@@ -165,6 +168,11 @@
             // nbPriceMMF
             // 
             this.nbPriceMMF.Location = new System.Drawing.Point(718, 271);
+            this.nbPriceMMF.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nbPriceMMF.Name = "nbPriceMMF";
             this.nbPriceMMF.Size = new System.Drawing.Size(149, 23);
             this.nbPriceMMF.TabIndex = 15;
@@ -173,6 +181,11 @@
             // nbStockMMF
             // 
             this.nbStockMMF.Location = new System.Drawing.Point(718, 317);
+            this.nbStockMMF.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nbStockMMF.Name = "nbStockMMF";
             this.nbStockMMF.Size = new System.Drawing.Size(149, 23);
             this.nbStockMMF.TabIndex = 16;
@@ -185,6 +198,7 @@
             this.btnDeleteMMF.TabIndex = 17;
             this.btnDeleteMMF.Text = "Sil";
             this.btnDeleteMMF.UseVisualStyleBackColor = true;
+            this.btnDeleteMMF.Click += new System.EventHandler(this.btnDeleteMMF_Click);
             // 
             // btnUpdateMMF
             // 
@@ -194,6 +208,17 @@
             this.btnUpdateMMF.TabIndex = 18;
             this.btnUpdateMMF.Text = "Güncelle";
             this.btnUpdateMMF.UseVisualStyleBackColor = true;
+            this.btnUpdateMMF.Click += new System.EventHandler(this.btnUpdateMMF_Click);
+            // 
+            // lblProductInfo
+            // 
+            this.lblProductInfo.AutoSize = true;
+            this.lblProductInfo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProductInfo.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblProductInfo.Location = new System.Drawing.Point(12, 389);
+            this.lblProductInfo.Name = "lblProductInfo";
+            this.lblProductInfo.Size = new System.Drawing.Size(0, 25);
+            this.lblProductInfo.TabIndex = 19;
             // 
             // MainMenuForm
             // 
@@ -201,6 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(103)))), ((int)(((byte)(122)))));
             this.ClientSize = new System.Drawing.Size(884, 438);
+            this.Controls.Add(this.lblProductInfo);
             this.Controls.Add(this.btnUpdateMMF);
             this.Controls.Add(this.btnDeleteMMF);
             this.Controls.Add(this.nbStockMMF);
@@ -245,5 +271,6 @@
         private NumericUpDown nbStockMMF;
         private Button btnDeleteMMF;
         private Button btnUpdateMMF;
+        private Label lblProductInfo;
     }
 }

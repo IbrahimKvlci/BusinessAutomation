@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp.CommonClasses;
+using WindowsFormsApp.CommonClasses.Abstract;
 
 namespace WindowsFormsApp.Forms
 {
@@ -19,6 +21,7 @@ namespace WindowsFormsApp.Forms
         IProductService _iProductService;
         IBrandService _iBrandService;
         ICategoryService _iCategoryService;
+        IGetAllEntites _iGetAllEntites;
 
         public ProductAdd()
         {
@@ -26,14 +29,15 @@ namespace WindowsFormsApp.Forms
             _iProductService = new ProductManager(new EfProductDal());
             _iBrandService=new BrandManager(new EfBrandDal());
             _iCategoryService = new CategoryManager(new EfCategoryDal());
+            _iGetAllEntites = new GetAllEntites();
         }
 
         private void pbxImageMMF_Click(object sender, EventArgs e)
         {
             string appPath = Path.GetDirectoryName(Application.ExecutablePath) + @"Images\";
-            if (Directory.Exists(appPath) == false)                                              // <---
-            {                                                                                    // <---
-                Directory.CreateDirectory(appPath);                                              // <---
+            if (Directory.Exists(appPath) == false)                                             
+            {                                                                                   
+                Directory.CreateDirectory(appPath);                                            
             }
 
             using (OpenFileDialog fileDialog=new OpenFileDialog())
@@ -69,20 +73,13 @@ namespace WindowsFormsApp.Forms
         void GetAllCategories()
         {
             var categories = _iCategoryService.GetAll();
-
-            cbxCategoryMMF.DataSource = categories;
-            cbxCategoryMMF.DisplayMember = "Name";
-            cbxCategoryMMF.ValueMember = "Id";
-
+            _iGetAllEntites.GetAllCategoriesToComboBox(cbxCategoryMMF, categories);
         }
 
         void GetAllBrands()
         {
             var brands = _iBrandService.GetAll();
-
-            cbxBrandMMF.DataSource = brands;
-            cbxBrandMMF.DisplayMember = "Name";
-            cbxBrandMMF.ValueMember = "Id";
+            _iGetAllEntites.GetAllBrandsToComboBox(cbxBrandMMF, brands);
         }
 
 

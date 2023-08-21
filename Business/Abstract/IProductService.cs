@@ -1,4 +1,5 @@
 ﻿using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,10 @@ namespace Business.Abstract
         void Delete(Product product);
         List<Product> GetAll();
         Product GetProductById(int id);
+        Product GetProductByBarcode(string barcode);
         List<Product> GetAllByCategoryId(int categoryId);
+        List<ProductDetailsDTO> GetAllProductsDetails();
+        ProductDetailsDTO GetProductDetailsByProductId(int id);
+
     }
 }

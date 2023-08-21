@@ -16,5 +16,20 @@ namespace WindowsFormsApp.Componenets
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        public void GetProductProperties(string lblBrand,string lblCategory,string lblPrice,string imageProduct,string lblTitle)
+        {
+            lblBrandProduct.Text = lblBrand;
+            lblCategoryProduct.Text = lblCategory;
+            lblPriceProduct.Text = $"{lblPrice} ₺";
+            pbxImageProduct.ImageLocation=imageProduct;
+            lblTitleProduct.Text=lblTitle;
+            
+        }
     }
 }

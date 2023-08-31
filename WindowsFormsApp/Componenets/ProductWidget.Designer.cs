@@ -65,6 +65,7 @@
             this.btnUpdateProduct.TabIndex = 6;
             this.btnUpdateProduct.Text = "Güncelle";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // btnDeleteProduct
             // 
@@ -74,6 +75,7 @@
             this.btnDeleteProduct.TabIndex = 5;
             this.btnDeleteProduct.Text = "Sil";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // lblPriceProduct
             // 

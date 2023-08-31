@@ -85,6 +85,7 @@
             this.cbxCategoryMMF.Name = "cbxCategoryMMF";
             this.cbxCategoryMMF.Size = new System.Drawing.Size(150, 23);
             this.cbxCategoryMMF.TabIndex = 4;
+            this.cbxCategoryMMF.SelectedIndexChanged += new System.EventHandler(this.cbxCategoryMMF_SelectedIndexChanged);
             // 
             // cbxBrandMMF
             // 

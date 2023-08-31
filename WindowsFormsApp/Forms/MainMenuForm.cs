@@ -107,6 +107,8 @@ namespace WindowsFormsApp.Forms
                 };
 
                 _iProductService.Update(product);
+                this.Controls.Clear();
+                this.InitializeComponent();
             }
             
         }
@@ -120,6 +122,11 @@ namespace WindowsFormsApp.Forms
                 this.InitializeComponent();
             }
            
+        }
+
+        private void cbxCategoryMMF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

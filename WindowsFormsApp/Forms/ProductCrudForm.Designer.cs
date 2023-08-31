@@ -87,6 +87,7 @@
             this.cbxBrandPCF.Name = "cbxBrandPCF";
             this.cbxBrandPCF.Size = new System.Drawing.Size(121, 23);
             this.cbxBrandPCF.TabIndex = 6;
+            this.cbxBrandPCF.SelectedIndexChanged += new System.EventHandler(this.cbxBrandPCF_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -102,10 +103,13 @@
             // cbxCategoryPCF
             // 
             this.cbxCategoryPCF.FormattingEnabled = true;
+            this.cbxCategoryPCF.Items.AddRange(new object[] {
+            "Tumu"});
             this.cbxCategoryPCF.Location = new System.Drawing.Point(572, 33);
             this.cbxCategoryPCF.Name = "cbxCategoryPCF";
             this.cbxCategoryPCF.Size = new System.Drawing.Size(121, 23);
             this.cbxCategoryPCF.TabIndex = 4;
+            this.cbxCategoryPCF.SelectedIndexChanged += new System.EventHandler(this.cbxCategoryPCF_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -124,6 +128,7 @@
             this.tbxTitlePCF.Name = "tbxTitlePCF";
             this.tbxTitlePCF.Size = new System.Drawing.Size(248, 23);
             this.tbxTitlePCF.TabIndex = 2;
+            this.tbxTitlePCF.TextChanged += new System.EventHandler(this.tbxTitlePCF_TextChanged);
             // 
             // lblBarcode
             // 
@@ -142,6 +147,7 @@
             this.tbxBarcodePCF.Name = "tbxBarcodePCF";
             this.tbxBarcodePCF.Size = new System.Drawing.Size(248, 23);
             this.tbxBarcodePCF.TabIndex = 0;
+            this.tbxBarcodePCF.TextChanged += new System.EventHandler(this.tbxBarcodePCF_TextChanged);
             // 
             // flowLayoutPanel1
             // 

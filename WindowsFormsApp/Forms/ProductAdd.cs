@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp.CommonClasses;
 using WindowsFormsApp.CommonClasses.Abstract;
+using WindowsFormsApp.CommonClasses.ImageTool.Abstract;
+using WindowsFormsApp.CommonClasses.ImageTool.Concrete;
 
 namespace WindowsFormsApp.Forms
 {
@@ -23,6 +25,8 @@ namespace WindowsFormsApp.Forms
         ICategoryService _iCategoryService;
         IGetAllEntites _iGetAllEntites;
 
+        IImageAdd _imageAdd;
+
         public ProductAdd()
         {
             InitializeComponent();
@@ -30,6 +34,7 @@ namespace WindowsFormsApp.Forms
             _iBrandService=new BrandManager(new EfBrandDal());
             _iCategoryService = new CategoryManager(new EfCategoryDal());
             _iGetAllEntites = new GetAllEntites();
+            _imageAdd = new ImageAdd();
         }
 
         private void pbxImageMMF_Click(object sender, EventArgs e)
@@ -40,18 +45,7 @@ namespace WindowsFormsApp.Forms
                 Directory.CreateDirectory(appPath);                                            
             }
 
-            using (OpenFileDialog fileDialog=new OpenFileDialog())
-            {
-                fileDialog.Title = "Urun Resmi Secin";
-                fileDialog.Filter= "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
-                if (fileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string combinedAppPath = Path.Combine(appPath, Path.GetFileName(fileDialog.FileName));
-                    File.Copy(fileDialog.FileName,combinedAppPath );
-                    pbxImageMMF.ImageLocation = combinedAppPath;
-                    pbxImageMMF.Image = new Bitmap(fileDialog.FileName);
-                }
-            }
+            _imageAdd.ImageAdd(appPath, pbxImageMMF);
         }
 
         private void btnAddMMF_Click(object sender, EventArgs e)

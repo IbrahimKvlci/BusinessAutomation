@@ -21,6 +21,7 @@ namespace Business.Concrete
 
         public void Add(Product product)
         {
+            CheckProductPrice(10000, product);
             _iProductDal.Add(product);
         }
 
@@ -32,6 +33,11 @@ namespace Business.Concrete
         public List<Product> GetAll()
         {
             return _iProductDal.GetAll();
+        }
+
+        public List<Product> GetAllByBrandId(int brandId)
+        {
+            return _iProductDal.GetAll(p => p.BrandId == brandId);
         }
 
         public List<Product> GetAllByCategoryId(int categoryId)
@@ -59,9 +65,23 @@ namespace Business.Concrete
             return _iProductDal.GetProductDetails(p=>p.Id==id);
         }
 
+        public void SetSalePriceToAllProducts(int percentage)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Product product)
         {
+            CheckProductPrice(10000, product);
             _iProductDal.Update(product);
+        }
+
+        void CheckProductPrice(int maxPrice,Product product)
+        {
+            if (product.Price > maxPrice)
+            {
+                product.Price = 0;
+            }
         }
     }
 }

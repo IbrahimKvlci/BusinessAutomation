@@ -29,47 +29,47 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.cbxBrand = new System.Windows.Forms.ComboBox();
+            this.btnApplyBrand = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.nmValueBrand = new System.Windows.Forms.NumericUpDown();
+            this.cbxSaleBrand = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cbxCategory = new System.Windows.Forms.ComboBox();
+            this.btnApplyCategory = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.nmValueCategory = new System.Windows.Forms.NumericUpDown();
+            this.cbxSaleCategory = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnApplyAll = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.nmValueAll = new System.Windows.Forms.NumericUpDown();
+            this.cbxSaleAll = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmValueBrand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmValueCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmValueAll)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.cbxBrand);
+            this.panel1.Controls.Add(this.btnApplyBrand);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.numericUpDown3);
-            this.panel1.Controls.Add(this.comboBox5);
+            this.panel1.Controls.Add(this.nmValueBrand);
+            this.panel1.Controls.Add(this.cbxSaleBrand);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.cbxCategory);
+            this.panel1.Controls.Add(this.btnApplyCategory);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.numericUpDown2);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.nmValueCategory);
+            this.panel1.Controls.Add(this.cbxSaleCategory);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnApplyAll);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.nmValueAll);
+            this.panel1.Controls.Add(this.cbxSaleAll);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -77,22 +77,23 @@
             this.panel1.Size = new System.Drawing.Size(889, 557);
             this.panel1.TabIndex = 0;
             // 
-            // comboBox4
+            // cbxBrand
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(575, 132);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 23);
-            this.comboBox4.TabIndex = 16;
+            this.cbxBrand.FormattingEnabled = true;
+            this.cbxBrand.Location = new System.Drawing.Point(575, 132);
+            this.cbxBrand.Name = "cbxBrand";
+            this.cbxBrand.Size = new System.Drawing.Size(121, 23);
+            this.cbxBrand.TabIndex = 16;
             // 
-            // button3
+            // btnApplyBrand
             // 
-            this.button3.Location = new System.Drawing.Point(620, 211);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Uygula";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnApplyBrand.Location = new System.Drawing.Point(620, 211);
+            this.btnApplyBrand.Name = "btnApplyBrand";
+            this.btnApplyBrand.Size = new System.Drawing.Size(75, 23);
+            this.btnApplyBrand.TabIndex = 15;
+            this.btnApplyBrand.Text = "Uygula";
+            this.btnApplyBrand.UseVisualStyleBackColor = true;
+            this.btnApplyBrand.Click += new System.EventHandler(this.btnApplyBrand_Click);
             // 
             // label5
             // 
@@ -105,28 +106,28 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "%";
             // 
-            // numericUpDown3
+            // nmValueBrand
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(575, 172);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.nmValueBrand.Location = new System.Drawing.Point(575, 172);
+            this.nmValueBrand.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDown3.TabIndex = 13;
+            this.nmValueBrand.Name = "nmValueBrand";
+            this.nmValueBrand.Size = new System.Drawing.Size(120, 23);
+            this.nmValueBrand.TabIndex = 13;
             // 
-            // comboBox5
+            // cbxSaleBrand
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cbxSaleBrand.FormattingEnabled = true;
+            this.cbxSaleBrand.Items.AddRange(new object[] {
             "İndirim",
             "Zam"});
-            this.comboBox5.Location = new System.Drawing.Point(575, 92);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 23);
-            this.comboBox5.TabIndex = 12;
+            this.cbxSaleBrand.Location = new System.Drawing.Point(575, 92);
+            this.cbxSaleBrand.Name = "cbxSaleBrand";
+            this.cbxSaleBrand.Size = new System.Drawing.Size(121, 23);
+            this.cbxSaleBrand.TabIndex = 12;
             // 
             // label6
             // 
@@ -139,22 +140,23 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Markaya Göre Uygula";
             // 
-            // comboBox3
+            // cbxCategory
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(314, 132);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 10;
+            this.cbxCategory.FormattingEnabled = true;
+            this.cbxCategory.Location = new System.Drawing.Point(314, 132);
+            this.cbxCategory.Name = "cbxCategory";
+            this.cbxCategory.Size = new System.Drawing.Size(121, 23);
+            this.cbxCategory.TabIndex = 10;
             // 
-            // button2
+            // btnApplyCategory
             // 
-            this.button2.Location = new System.Drawing.Point(359, 211);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Uygula";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnApplyCategory.Location = new System.Drawing.Point(359, 211);
+            this.btnApplyCategory.Name = "btnApplyCategory";
+            this.btnApplyCategory.Size = new System.Drawing.Size(75, 23);
+            this.btnApplyCategory.TabIndex = 9;
+            this.btnApplyCategory.Text = "Uygula";
+            this.btnApplyCategory.UseVisualStyleBackColor = true;
+            this.btnApplyCategory.Click += new System.EventHandler(this.btnApplyCategory_Click);
             // 
             // label3
             // 
@@ -167,28 +169,28 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "%";
             // 
-            // numericUpDown2
+            // nmValueCategory
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(314, 172);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.nmValueCategory.Location = new System.Drawing.Point(314, 172);
+            this.nmValueCategory.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDown2.TabIndex = 7;
+            this.nmValueCategory.Name = "nmValueCategory";
+            this.nmValueCategory.Size = new System.Drawing.Size(120, 23);
+            this.nmValueCategory.TabIndex = 7;
             // 
-            // comboBox2
+            // cbxSaleCategory
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbxSaleCategory.FormattingEnabled = true;
+            this.cbxSaleCategory.Items.AddRange(new object[] {
             "İndirim",
             "Zam"});
-            this.comboBox2.Location = new System.Drawing.Point(314, 92);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 6;
+            this.cbxSaleCategory.Location = new System.Drawing.Point(314, 92);
+            this.cbxSaleCategory.Name = "cbxSaleCategory";
+            this.cbxSaleCategory.Size = new System.Drawing.Size(121, 23);
+            this.cbxSaleCategory.TabIndex = 6;
             // 
             // label4
             // 
@@ -201,14 +203,15 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Kategoriye Göre Uygula";
             // 
-            // button1
+            // btnApplyAll
             // 
-            this.button1.Location = new System.Drawing.Point(95, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Uygula";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnApplyAll.Location = new System.Drawing.Point(95, 172);
+            this.btnApplyAll.Name = "btnApplyAll";
+            this.btnApplyAll.Size = new System.Drawing.Size(75, 23);
+            this.btnApplyAll.TabIndex = 4;
+            this.btnApplyAll.Text = "Uygula";
+            this.btnApplyAll.UseVisualStyleBackColor = true;
+            this.btnApplyAll.Click += new System.EventHandler(this.btnApplyAll_Click);
             // 
             // label2
             // 
@@ -221,28 +224,28 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "%";
             // 
-            // numericUpDown1
+            // nmValueAll
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(50, 133);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nmValueAll.Location = new System.Drawing.Point(50, 133);
+            this.nmValueAll.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDown1.TabIndex = 2;
+            this.nmValueAll.Name = "nmValueAll";
+            this.nmValueAll.Size = new System.Drawing.Size(120, 23);
+            this.nmValueAll.TabIndex = 2;
             // 
-            // comboBox1
+            // cbxSaleAll
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxSaleAll.FormattingEnabled = true;
+            this.cbxSaleAll.Items.AddRange(new object[] {
             "İndirim",
             "Zam"});
-            this.comboBox1.Location = new System.Drawing.Point(50, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 1;
+            this.cbxSaleAll.Location = new System.Drawing.Point(50, 92);
+            this.cbxSaleAll.Name = "cbxSaleAll";
+            this.cbxSaleAll.Size = new System.Drawing.Size(121, 23);
+            this.cbxSaleAll.TabIndex = 1;
             // 
             // label1
             // 
@@ -264,11 +267,12 @@
             this.Controls.Add(this.panel1);
             this.Name = "SetSaleForm";
             this.Text = "SetSaleForm";
+            this.Load += new System.EventHandler(this.SetSaleForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmValueBrand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmValueCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmValueAll)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,22 +280,22 @@
         #endregion
 
         private Panel panel1;
-        private ComboBox comboBox4;
-        private Button button3;
+        private ComboBox cbxBrand;
+        private Button btnApplyBrand;
         private Label label5;
-        private NumericUpDown numericUpDown3;
-        private ComboBox comboBox5;
+        private NumericUpDown nmValueBrand;
+        private ComboBox cbxSaleBrand;
         private Label label6;
-        private ComboBox comboBox3;
-        private Button button2;
+        private ComboBox cbxCategory;
+        private Button btnApplyCategory;
         private Label label3;
-        private NumericUpDown numericUpDown2;
-        private ComboBox comboBox2;
+        private NumericUpDown nmValueCategory;
+        private ComboBox cbxSaleCategory;
         private Label label4;
-        private Button button1;
+        private Button btnApplyAll;
         private Label label2;
-        private NumericUpDown numericUpDown1;
-        private ComboBox comboBox1;
+        private NumericUpDown nmValueAll;
+        private ComboBox cbxSaleAll;
         private Label label1;
     }
 }

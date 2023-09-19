@@ -58,21 +58,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnECommercePanel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACwwAAAsMAT9AIsgAAAAHdElNRQfnCA8RFCM+q7VtAAAB
-        8klEQVRIS92VQUsVURiGr1oKJvgfhDaCm6CF1c4EhaAMXLQPItTAf5ArA3cthBbiQi1okf8hwZ2bSgJF
-        QvsDIUYS5Ol5z3nvnZk7dxyD3PjAy8x5v/fMx8y930zjahNCuIYeoLfoE/qBTtBXtI6m0XXH/w023kff
-        UB376JG3XQw2vEJn2l3DFx+F9nT7EtUQWojxeo5QN5pBv2TAoi/TGQJTKVeLLj7hbdo3hk5VgIe2i1Do
-        RYcxUs0dx0tQ052IPVT+4TGfxPI5ONoRynpcn2MwhMe2MzDfp1olW45WQmYuRcOarQzMg1QLGz7muevY
-        uZAbTvGwaysD8zjVwiB6mU5b3HOsAL7mZAl1ed2PxHEM5MHUhIoBr9ubNGk9Kq/FMoozwHELfYyBPJga
-        fzFsq7KJy/kGYhX1uFSG4kqM8UPZirAuNXGpvYF4hzq/myhMxkga/8LIJzvDdqcGYhP1OZKB2YV2lIBZ
-        2xHW35OdsF3VQDx3pAiF2+g30tiP25avu2s1sZ1voD3ig0vVEHqG9CZVkxeo9bg4j3iptXKv0bx8+INu
-        ulwNoaeo+fLaRWo0ElfgmHKjPmp2mnO0HIt1ELyFtuOWNhwpgK07ET/RDdv1ENaX7Q3SnGgYy0ME+ENI
-        n1S9cnpt/1+48AAq/0Uvj0bjLzGN7aoC70RdAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnSetSalePanel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1

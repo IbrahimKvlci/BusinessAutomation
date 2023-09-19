@@ -58,6 +58,7 @@
             // 
             // nbStockUpdate
             // 
+            this.nbStockUpdate.DecimalPlaces = 2;
             this.nbStockUpdate.Location = new System.Drawing.Point(718, 291);
             this.nbStockUpdate.Maximum = new decimal(new int[] {
             10000,
@@ -70,6 +71,7 @@
             // 
             // nbPriceUpdate
             // 
+            this.nbPriceUpdate.DecimalPlaces = 2;
             this.nbPriceUpdate.Location = new System.Drawing.Point(718, 245);
             this.nbPriceUpdate.Maximum = new decimal(new int[] {
             10000,

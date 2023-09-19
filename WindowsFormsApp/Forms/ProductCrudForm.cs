@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
+using Business.Core.Tools.HtmlAgility.Concrete;
+using Business.Core.Tools.MyWebClient.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Entities.DTOs;
@@ -30,7 +32,7 @@ namespace WindowsFormsApp.Forms
         public ProductCrudForm()
         {
             InitializeComponent();
-            _iProductService = new ProductManager(new EfProductDal());
+            _iProductService = new ProductManager(new EfProductDal(), new MyWebClient(), new HtmlAgility());
             _getAllEntites = new GetAllEntites();
             _categoryService = new CategoryManager(new EfCategoryDal());
             _brandService=new BrandManager(new EfBrandDal());
@@ -136,6 +138,30 @@ namespace WindowsFormsApp.Forms
             {
                 AddProductsToScreen(_productsDetails);
             }
+        }
+
+        private void nmMin_ValueChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            if (nmMax.Value == 0)
+            {
+                nmMax.Value = 10000;
+            }
+            var list = _productsDetails.Where(p => nmMin.Value <= p.Price);
+            var lastList=list.Where(p=>p.Price<=nmMax.Value);
+            AddProductsToScreen(lastList.ToList());
+        }
+
+        private void nmMax_ValueChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            if (nmMax.Value == 0)
+            {
+                nmMax.Value = 10000;
+            }
+            var list = _productsDetails.Where(p => nmMin.Value <= p.Price);
+            var lastList = list.Where(p => p.Price <= nmMax.Value);
+            AddProductsToScreen(lastList.ToList());
         }
     }
 }

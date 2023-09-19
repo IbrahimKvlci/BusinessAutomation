@@ -14,5 +14,6 @@ namespace Business.Abstract
         void Delete(Brand brand);
         List<Brand> GetAll();
         Brand GetBrandById(int id);
+        bool IsExist(string name,out int id);
     }
 }

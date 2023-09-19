@@ -48,6 +48,7 @@
             // 
             // nbStockMMF
             // 
+            this.nbStockMMF.DecimalPlaces = 2;
             this.nbStockMMF.Location = new System.Drawing.Point(718, 301);
             this.nbStockMMF.Maximum = new decimal(new int[] {
             10000,
@@ -60,6 +61,7 @@
             // 
             // nbPriceMMF
             // 
+            this.nbPriceMMF.DecimalPlaces = 2;
             this.nbPriceMMF.Location = new System.Drawing.Point(718, 255);
             this.nbPriceMMF.Maximum = new decimal(new int[] {
             10000,

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnECommercePanel = new System.Windows.Forms.Button();
             this.btnSetSalePanel = new System.Windows.Forms.Button();
             this.btnProductCrudPanel = new System.Windows.Forms.Button();
             this.btnMainMenuPanel = new System.Windows.Forms.Button();
@@ -45,7 +44,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
-            this.panel2.Controls.Add(this.btnECommercePanel);
             this.panel2.Controls.Add(this.btnSetSalePanel);
             this.panel2.Controls.Add(this.btnProductCrudPanel);
             this.panel2.Controls.Add(this.btnMainMenuPanel);
@@ -54,25 +52,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(125, 596);
             this.panel2.TabIndex = 1;
-            // 
-            // btnECommercePanel
-            // 
-            this.btnECommercePanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnECommercePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnECommercePanel.FlatAppearance.BorderSize = 0;
-            this.btnECommercePanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnECommercePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(246)))), ((int)(((byte)(224)))));
-            this.btnECommercePanel.Image = ((System.Drawing.Image)(resources.GetObject("btnECommercePanel.Image")));
-            this.btnECommercePanel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnECommercePanel.Location = new System.Drawing.Point(0, 210);
-            this.btnECommercePanel.Name = "btnECommercePanel";
-            this.btnECommercePanel.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnECommercePanel.Size = new System.Drawing.Size(125, 70);
-            this.btnECommercePanel.TabIndex = 3;
-            this.btnECommercePanel.Text = "  E-Ticaret İşlemleri";
-            this.btnECommercePanel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnECommercePanel.UseVisualStyleBackColor = true;
-            this.btnECommercePanel.Click += new System.EventHandler(this.btnECommercePanel_Click);
             // 
             // btnSetSalePanel
             // 
@@ -184,7 +163,6 @@
         #endregion
         private Panel panel2;
         private Button btnMainMenuPanel;
-        private Button btnECommercePanel;
         private Button btnSetSalePanel;
         private Button btnProductCrudPanel;
         private PictureBox pictureBox1;

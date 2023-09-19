@@ -14,5 +14,6 @@ namespace Business.Abstract
         void Delete(Category category);
         List<Category> GetAll();
         Category GetCategoryById(int id);
+        bool IsExist(string name,out int id);
     }
 }

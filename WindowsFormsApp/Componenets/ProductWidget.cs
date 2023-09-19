@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
+using Business.Core.Tools.HtmlAgility.Concrete;
+using Business.Core.Tools.MyWebClient.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -22,7 +24,7 @@ namespace WindowsFormsApp.Componenets
         public ProductWidget()
         {
             InitializeComponent();
-            _iProductService = new ProductManager(new EfProductDal());
+            _iProductService = new ProductManager(new EfProductDal(), new MyWebClient(), new HtmlAgility());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

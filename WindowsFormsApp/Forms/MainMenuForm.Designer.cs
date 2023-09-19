@@ -45,6 +45,7 @@
             this.btnDeleteMMF = new System.Windows.Forms.Button();
             this.btnUpdateMMF = new System.Windows.Forms.Button();
             this.lblProductInfo = new System.Windows.Forms.Label();
+            this.addBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImageMMF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbPriceMMF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbStockMMF)).BeginInit();
@@ -168,6 +169,7 @@
             // 
             // nbPriceMMF
             // 
+            this.nbPriceMMF.DecimalPlaces = 2;
             this.nbPriceMMF.Location = new System.Drawing.Point(718, 271);
             this.nbPriceMMF.Maximum = new decimal(new int[] {
             10000,
@@ -181,6 +183,7 @@
             // 
             // nbStockMMF
             // 
+            this.nbStockMMF.DecimalPlaces = 2;
             this.nbStockMMF.Location = new System.Drawing.Point(718, 317);
             this.nbStockMMF.Maximum = new decimal(new int[] {
             10000,
@@ -221,12 +224,24 @@
             this.lblProductInfo.Size = new System.Drawing.Size(0, 25);
             this.lblProductInfo.TabIndex = 19;
             // 
+            // addBtn
+            // 
+            this.addBtn.Location = new System.Drawing.Point(611, 417);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(120, 23);
+            this.addBtn.TabIndex = 20;
+            this.addBtn.Text = "Ekle";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Visible = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(103)))), ((int)(((byte)(122)))));
-            this.ClientSize = new System.Drawing.Size(884, 438);
+            this.ClientSize = new System.Drawing.Size(917, 518);
+            this.Controls.Add(this.addBtn);
             this.Controls.Add(this.lblProductInfo);
             this.Controls.Add(this.btnUpdateMMF);
             this.Controls.Add(this.btnDeleteMMF);
@@ -273,5 +288,6 @@
         private Button btnDeleteMMF;
         private Button btnUpdateMMF;
         private Label lblProductInfo;
+        private Button addBtn;
     }
 }

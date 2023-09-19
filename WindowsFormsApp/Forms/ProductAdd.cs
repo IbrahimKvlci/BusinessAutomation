@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
+using Business.Core.Tools.HtmlAgility.Concrete;
+using Business.Core.Tools.MyWebClient.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
@@ -30,8 +32,8 @@ namespace WindowsFormsApp.Forms
         public ProductAdd()
         {
             InitializeComponent();
-            _iProductService = new ProductManager(new EfProductDal());
-            _iBrandService=new BrandManager(new EfBrandDal());
+            _iProductService = new ProductManager(new EfProductDal(), new MyWebClient(), new HtmlAgility());
+            _iBrandService =new BrandManager(new EfBrandDal());
             _iCategoryService = new CategoryManager(new EfCategoryDal());
             _iGetAllEntites = new GetAllEntites();
             _imageAdd = new ImageAdd();

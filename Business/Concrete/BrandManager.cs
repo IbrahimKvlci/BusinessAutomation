@@ -37,6 +37,18 @@ namespace Business.Concrete
             return _iBrandDal.Get(b => b.Id == id);
         }
 
+        public bool IsExist(string name,out int id)
+        {
+            var brand = _iBrandDal.Get(b => b.Name == name);
+            if(brand != null)
+            {
+                id = brand.Id;
+                return true;
+            }
+            id = -1;
+            return false;
+        }
+
         public void Update(Brand brand)
         {
             _iBrandDal.Update(brand);

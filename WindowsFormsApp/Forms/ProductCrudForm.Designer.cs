@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nmMax = new System.Windows.Forms.NumericUpDown();
+            this.nmMin = new System.Windows.Forms.NumericUpDown();
             this.btnAddPCF = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cbxBrandPCF = new System.Windows.Forms.ComboBox();
@@ -40,10 +44,16 @@
             this.tbxBarcodePCF = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.nmMax);
+            this.panel1.Controls.Add(this.nmMin);
             this.panel1.Controls.Add(this.btnAddPCF);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cbxBrandPCF);
@@ -56,12 +66,62 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1067, 77);
+            this.panel1.Size = new System.Drawing.Size(1350, 77);
             this.panel1.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(997, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 21);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Max";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(861, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Min";
+            // 
+            // nmMax
+            // 
+            this.nmMax.DecimalPlaces = 2;
+            this.nmMax.Location = new System.Drawing.Point(997, 33);
+            this.nmMax.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nmMax.Name = "nmMax";
+            this.nmMax.Size = new System.Drawing.Size(120, 23);
+            this.nmMax.TabIndex = 10;
+            this.nmMax.ValueChanged += new System.EventHandler(this.nmMax_ValueChanged);
+            // 
+            // nmMin
+            // 
+            this.nmMin.DecimalPlaces = 2;
+            this.nmMin.Location = new System.Drawing.Point(861, 33);
+            this.nmMin.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nmMin.Name = "nmMin";
+            this.nmMin.Size = new System.Drawing.Size(120, 23);
+            this.nmMin.TabIndex = 9;
+            this.nmMin.ValueChanged += new System.EventHandler(this.nmMin_ValueChanged);
             // 
             // btnAddPCF
             // 
-            this.btnAddPCF.Location = new System.Drawing.Point(875, 33);
+            this.btnAddPCF.Location = new System.Drawing.Point(1140, 33);
             this.btnAddPCF.Name = "btnAddPCF";
             this.btnAddPCF.Size = new System.Drawing.Size(101, 23);
             this.btnAddPCF.TabIndex = 8;
@@ -155,7 +215,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 77);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1067, 530);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1350, 530);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -164,7 +224,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(103)))), ((int)(((byte)(122)))));
-            this.ClientSize = new System.Drawing.Size(1067, 607);
+            this.ClientSize = new System.Drawing.Size(1350, 607);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "ProductCrudForm";
@@ -172,6 +232,8 @@
             this.Load += new System.EventHandler(this.ProductCrudForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmMin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,5 +251,9 @@
         private TextBox tbxTitlePCF;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button btnAddPCF;
+        private Label label5;
+        private Label label4;
+        private NumericUpDown nmMax;
+        private NumericUpDown nmMin;
     }
 }

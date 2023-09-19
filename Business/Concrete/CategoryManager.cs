@@ -38,6 +38,18 @@ namespace Business.Concrete
             return _iCategoryDal.Get(c => c.Id == id);
         }
 
+        public bool IsExist(string name,out int id)
+        {
+            var category = _iCategoryDal.Get(c => c.Name==name);
+            if (category!=null)
+            {
+                id= category.Id;
+                return true;
+            }
+            id= -1;
+            return false;
+        }
+
         public void Update(Category category)
         {
             _iCategoryDal.Update(category);

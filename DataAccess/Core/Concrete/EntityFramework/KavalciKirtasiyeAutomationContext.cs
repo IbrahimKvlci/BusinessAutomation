@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DataAccess.Core.Concrete.EntityFramework
 {
@@ -12,7 +14,8 @@ namespace DataAccess.Core.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source=D:\Users\kimze\OneDrive\DataBase\KavalciKirtasiyeAutomationDB.db");
+            
+            optionsBuilder.UseSqlite(@"Data Source=Data/KavalciKirtasiyeAutomationDB.db");
         }
 
         public DbSet<Product> Products { get; set; }

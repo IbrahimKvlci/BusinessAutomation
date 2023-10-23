@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.nmMax = new System.Windows.Forms.NumericUpDown();
@@ -50,6 +52,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnNext);
+            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.nmMax);
@@ -66,8 +70,28 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1350, 77);
+            this.panel1.Size = new System.Drawing.Size(1350, 105);
             this.panel1.TabIndex = 0;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(93, 76);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.TabIndex = 14;
+            this.btnNext.Text = "Ileri";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(12, 76);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Geri";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // label5
             // 
@@ -213,9 +237,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 77);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 105);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1350, 530);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1350, 502);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -255,5 +279,7 @@
         private Label label4;
         private NumericUpDown nmMax;
         private NumericUpDown nmMin;
+        private Button btnNext;
+        private Button btnBack;
     }
 }

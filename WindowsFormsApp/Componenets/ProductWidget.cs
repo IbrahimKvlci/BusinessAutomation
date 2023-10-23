@@ -13,12 +13,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp.Forms;
+using WindowsFormsApp.Tools.Request;
 
 namespace WindowsFormsApp.Componenets
 {
     public partial class ProductWidget : UserControl
     {
+
+
         int _productId;
+
+
         IProductService _iProductService;
 
         public ProductWidget()
@@ -51,7 +56,8 @@ namespace WindowsFormsApp.Componenets
 
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
-            _iProductService.Delete(_iProductService.GetProductById(_productId));
+            var result=_iProductService.Delete(_iProductService.GetProductById(_productId).Data);
+            Request.ShowRequest(result);
         }
     }
 }

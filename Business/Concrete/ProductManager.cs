@@ -1,10 +1,13 @@
 ﻿using Business.Abstract;
+using Business.Constants.Messages;
 using Business.Core.Tools.GetPriceFromString;
 using Business.Core.Tools.HtmlAgility.Abstract;
 using Business.Core.Tools.MyWebClient.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -17,98 +20,94 @@ namespace Business.Concrete
     public class ProductManager : IProductService
     {
         IProductDal _iProductDal;
-        IWebClient _webClient;
-        IHtmlAgility _htmlAgility;
-        IGetPrice _getPrice;
 
         public ProductManager(IProductDal iProductDal,IWebClient webClient,IHtmlAgility htmlAgility)
         {
             _iProductDal = iProductDal;
-            _webClient=webClient;
-            _htmlAgility = htmlAgility;
-            _getPrice = new GetPriceFromTrendyol();
         }
 
-        public void Add(Product product)
+        public IResult Add(Product product)
         {
-            CheckProductPrice(10000, product);
-            IsThereNullValue(product);
-            _iProductDal.Add(product);
-        }
-
-        public void Delete(Product product)
-        {
-            _iProductDal.Delete(product);
-        }
-
-        public List<Product> GetAll()
-        {
-            return _iProductDal.GetAll();
-        }
-
-        public List<Product> GetAllByBrandId(int brandId)
-        {
-            return _iProductDal.GetAll(p => p.BrandId == brandId);
-        }
-
-        public List<Product> GetAllByCategoryId(int categoryId)
-        {
-            return _iProductDal.GetAll(p => p.CategoryId == categoryId);
-        }
-
-        public List<ProductDetailsDTO> GetAllProductsDetails()
-        {
-            return _iProductDal.GetProductsDetails();
-        }
-
-        public Product GetProductByBarcode(string barcode)
-        {
-            return _iProductDal.Get(p => p.Barcode == barcode);
-        }
-
-        public ProductDetailsDTO GetProductByBarcodeFromTrendyol(string barcode)
-        {
-            string webSite = "https://www.trendyol.com/sr?q="+barcode;
             
-            string htmlData=_webClient.GetDataHtml(webSite);
-            var productBrand=_htmlAgility.GetContentFromWebSite(webSite, "//span[@class='prdct-desc-cntnr-ttl']");
-            //var productImage = _htmlAgility.GetContentFromWebSiteWithAttributes(webSite, "//span[@class='p-card-img']", "src");
-            var productCategory = _htmlAgility.GetContentFromWebSite(webSite, "/html/body/div[1]/div[3]/div[2]/div[2]/div/div/div/div[1]/div[1]/div/div/div[1]/div[2]/div/div/div/div/a/div");
-            //var productPrice = _htmlAgility.GetContentFromWebSite(webSite, "/html/body/div[1]/div[3]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[4]/div[1]/div/div/div[1]/a/div[2]/div[3]/div/div/div");
-            var productName = _htmlAgility.GetContentFromWebSite(webSite, "//span[@class='prdct-desc-cntnr-name hasRatings']");
-
-
-            var productDetailsDTO = new ProductDetailsDTO
+            try
             {
-                Barcode = barcode,
-                BrandName = productBrand,
-                //ImageUrl = productImage,
-                //Price = Convert.ToDecimal(_getPrice.GetPrice(productPrice)),
-                Name = productName,
-                CategoryName = productCategory
-            };
-            return productDetailsDTO;
+                CheckProductPrice(10000, product);
+                IsThereNullValue(product);
+                _iProductDal.Add(product);
+            }
+            catch (DbUpdateException)
+            {
+                return new ErrorResult(Messages.ProductAlreadyExists);
+            }
+            catch (NullReferenceException)
+            {
+                return new ErrorResult(Messages.CannotBeNull);
+            }
+            return new SuccessResult(Messages.ProductAdded);
+            
         }
 
-        public Product GetProductById(int id)
+        public IResult Delete(Product product)
         {
-            return _iProductDal.Get(p => p.Id == id);
+
+            try
+            {
+                _iProductDal.Delete(product);
+            }
+            catch (ArgumentNullException)
+            {
+                return new ErrorResult(Messages.ProductNotExist);
+            }
+            return new SuccessResult(Messages.ProductDeleted);
         }
 
-        public ProductDetailsDTO GetProductDetailsByProductId(int id)
+        public IDataResult<List<Product>> GetAll()
         {
-            return _iProductDal.GetProductDetails(p=>p.Id==id);
+            return new SuccessDataResult<List<Product>>(_iProductDal.GetAll());
         }
 
-        public void SetSalePriceToAllProducts(int percentage)
+        public IDataResult<List<Product>> GetAllByBrandId(int brandId)
+        {
+            return new SuccessDataResult<List<Product>>(_iProductDal.GetAll(p => p.BrandId == brandId));
+        }
+
+        public IDataResult<List<Product>> GetAllByCategoryId(int categoryId)
+        {
+            return new SuccessDataResult<List<Product>>(_iProductDal.GetAll(p => p.CategoryId == categoryId)); 
+        }
+
+        public IDataResult<List<ProductDetailsDTO>> GetAllProductsDetails()
+        {
+            return new SuccessDataResult<List<ProductDetailsDTO>>(_iProductDal.GetProductsDetails());
+        }
+
+        public IDataResult<Product> GetProductByBarcode(string barcode)
+        {
+            return new SuccessDataResult<Product>(_iProductDal.Get(p => p.Barcode == barcode));
+        }
+
+
+        public IDataResult<Product> GetProductById(int id)
+        {
+            return new SuccessDataResult<Product>(_iProductDal.Get(p => p.Id == id));
+        }
+
+        public IDataResult<ProductDetailsDTO> GetProductDetailsByProductId(int id)
+        {
+            return new SuccessDataResult<ProductDetailsDTO>(_iProductDal.GetProductDetails(p => p.Id == id));
+        }
+
+        public IResult SetSalePriceToAllProducts(int percentage)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Product product)
+        public IResult Update(Product product)
         {
             CheckProductPrice(10000, product);
+            CheckProductStock(product);
             _iProductDal.Update(product);
+            return new SuccessResult(Messages.ProductUpdated);
         }
 
         void CheckProductPrice(int maxPrice,Product product)
@@ -116,6 +115,14 @@ namespace Business.Concrete
             if (product.Price > maxPrice)
             {
                 product.Price = 0;
+            }
+        }
+
+        void CheckProductStock(Product product)
+        {
+            if (product.Stock < 0)
+            {
+                product.Stock = 0;
             }
         }
 
@@ -128,6 +135,14 @@ namespace Business.Concrete
             if(product.Name == null)
             {
                 product.Name = "No Name";
+            }
+            if (product.CategoryId == null || product.CategoryId == 0)
+            {
+                throw new NullReferenceException("Kategori veya Marka Bos Olamaz!");
+            }
+            if (product.BrandId == null || product.BrandId == 0)
+            {
+                throw new NullReferenceException("Kategori veya Marka Bos Olamaz!");
             }
         }
     }

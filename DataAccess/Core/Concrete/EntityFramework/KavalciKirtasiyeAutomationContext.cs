@@ -15,11 +15,13 @@ namespace DataAccess.Core.Concrete.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             
-            optionsBuilder.UseSqlite(@"Data Source=Data/KavalciKirtasiyeAutomationDB.db");
+            optionsBuilder.UseSqlite(@"Data Source="+ AppDomain.CurrentDomain.BaseDirectory + "/KavalciKirtasiyeAutomationDB.db");
         }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<ProductOrders> ProductOrders { get; set; }
     }
 }

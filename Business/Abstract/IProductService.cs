@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
@@ -11,17 +12,16 @@ namespace Business.Abstract
 {
     public interface IProductService
     {
-        void Add(Product product);
-        void Update(Product product);
-        void Delete(Product product);
-        List<Product> GetAll();
-        Product GetProductById(int id);
-        Product GetProductByBarcode(string barcode);
-        ProductDetailsDTO GetProductByBarcodeFromTrendyol(string barcode);
-        List<Product> GetAllByCategoryId(int categoryId);
-        List<Product> GetAllByBrandId(int brandId);
-        List<ProductDetailsDTO> GetAllProductsDetails();
-        ProductDetailsDTO GetProductDetailsByProductId(int id);
-        void SetSalePriceToAllProducts(int percentage);
+        IResult Add(Product product);
+        IResult Update(Product product);
+        IResult Delete(Product product);
+        IDataResult<List<Product>> GetAll();
+        IDataResult<Product> GetProductById(int id);
+        IDataResult<Product> GetProductByBarcode(string barcode);
+        IDataResult<List<Product>> GetAllByCategoryId(int categoryId);
+        IDataResult<List<Product>> GetAllByBrandId(int brandId);
+        IDataResult<List<ProductDetailsDTO>> GetAllProductsDetails();
+        IDataResult<ProductDetailsDTO> GetProductDetailsByProductId(int id);
+        IResult SetSalePriceToAllProducts(int percentage);
     }
 }

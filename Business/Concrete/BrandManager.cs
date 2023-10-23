@@ -39,7 +39,7 @@ namespace Business.Concrete
 
         public bool IsExist(string name,out int id)
         {
-            var brand = _iBrandDal.Get(b => b.Name == name);
+            var brand = _iBrandDal.Get(b => b.Name.ToLower() == name.ToLower());
             if(brand != null)
             {
                 id = brand.Id;

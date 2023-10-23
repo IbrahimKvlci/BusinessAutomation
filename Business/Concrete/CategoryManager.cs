@@ -40,7 +40,7 @@ namespace Business.Concrete
 
         public bool IsExist(string name,out int id)
         {
-            var category = _iCategoryDal.Get(c => c.Name==name);
+            var category = _iCategoryDal.Get(c => c.Name.ToLower()==name.ToLower());
             if (category!=null)
             {
                 id= category.Id;

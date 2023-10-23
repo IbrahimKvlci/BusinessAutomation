@@ -18,6 +18,7 @@ using WindowsFormsApp.CommonClasses.Abstract;
 using WindowsFormsApp.CommonClasses.ImageTool.Abstract;
 using WindowsFormsApp.CommonClasses.ImageTool.Concrete;
 using WindowsFormsApp.Componenets;
+using WindowsFormsApp.Tools.Request;
 
 namespace WindowsFormsApp.Forms
 {
@@ -40,10 +41,10 @@ namespace WindowsFormsApp.Forms
         {
             InitializeComponent();
             _productId = productId;
-            _iProductService = new ProductManager(new EfProductDal(), new MyWebClient(), new HtmlAgility());
-            _iGetAllEntites = new GetAllEntites();
-            _brandService = new BrandManager(new EfBrandDal());
-            _categoryService = new CategoryManager(new EfCategoryDal());
+            _iProductService = Form1._iProductService;
+            _iGetAllEntites = Form1._iGetAllEntites;
+            _brandService = Form1._iBrandService;
+            _categoryService = Form1._iCategoryService;
             _imageAdd = new ImageAdd();
         }
 
@@ -61,8 +62,8 @@ namespace WindowsFormsApp.Forms
                 Stock=(int)nbStockUpdate.Value
             };
 
-            _iProductService.Update(product);
-
+            var result=_iProductService.Update(product);
+            Request.ShowRequest(result);
             this.Close();
         }
 
@@ -71,7 +72,7 @@ namespace WindowsFormsApp.Forms
             _categories = _categoryService.GetAll();
             _brands = _brandService.GetAll();
 
-            _product = _iProductService.GetProductById(_productId);
+            _product = _iProductService.GetProductById(_productId).Data;
             _iGetAllEntites.GetAllBrandsToComboBox(cbxBrandUpdate,_brands);
             _iGetAllEntites.GetAllCategoriesToComboBox(cbxCategoryUpdate, _categories);
 

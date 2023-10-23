@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp.CommonClasses;
 using WindowsFormsApp.CommonClasses.Abstract;
+using WindowsFormsApp.Tools.Request;
 
 namespace WindowsFormsApp.Forms
 {
@@ -28,16 +29,19 @@ namespace WindowsFormsApp.Forms
         public SetSaleForm()
         {
             InitializeComponent();
-            _iProductService = new ProductManager(new EfProductDal(), new MyWebClient(), new HtmlAgility());
-            _iGetAllEntities = new GetAllEntites();
-            _categoryService = new CategoryManager(new EfCategoryDal());
-            _brandService=new BrandManager(new EfBrandDal());
+            _iProductService = Form1._iProductService;
+            _iGetAllEntities = Form1._iGetAllEntites;
+            _categoryService = Form1._iCategoryService;
+            _brandService = Form1._iBrandService;
         }
 
         private void btnApplyAll_Click(object sender, EventArgs e)
         {
-            var products = _iProductService.GetAll();
+            Cursor = Cursors.WaitCursor;
+            var products = _iProductService.GetAll().Data;
             SetSalePriceToProducts(products,cbxSaleAll,nmValueAll);
+            Cursor = Cursors.Default;
+            Request.ShowRequest("Fiyatlar Guncellendi", true);
         }
 
         void SetSalePriceToProducts(List<Product> products,ComboBox cbxSale,NumericUpDown nmValue)
@@ -63,8 +67,11 @@ namespace WindowsFormsApp.Forms
 
         private void btnApplyCategory_Click(object sender, EventArgs e)
         {
-            var products = _iProductService.GetAllByCategoryId((int)cbxCategory.SelectedValue);
+            Cursor = Cursors.WaitCursor;
+            var products = _iProductService.GetAllByCategoryId((int)cbxCategory.SelectedValue).Data;
             SetSalePriceToProducts(products,cbxSaleCategory,nmValueCategory);
+            Cursor = Cursors.Default;
+            Request.ShowRequest("Fiyatlar Guncellendi", true);
         }
 
         private void SetSaleForm_Load(object sender, EventArgs e)
@@ -75,8 +82,11 @@ namespace WindowsFormsApp.Forms
 
         private void btnApplyBrand_Click(object sender, EventArgs e)
         {
-            var products = _iProductService.GetAllByBrandId((int)cbxBrand.SelectedValue);
+            Cursor = Cursors.WaitCursor;
+            var products = _iProductService.GetAllByBrandId((int)cbxBrand.SelectedValue).Data;
             SetSalePriceToProducts(products, cbxSaleBrand, nmValueBrand);
+            Cursor = Cursors.Default;
+            Request.ShowRequest("Fiyatlar Guncellendi", true);
         }
     }
 }

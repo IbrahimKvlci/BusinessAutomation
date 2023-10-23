@@ -46,6 +46,10 @@
             this.btnUpdateMMF = new System.Windows.Forms.Button();
             this.lblProductInfo = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.lblBasketPrice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImageMMF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbPriceMMF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbStockMMF)).BeginInit();
@@ -235,12 +239,56 @@
             this.addBtn.Visible = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(892, 42);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(483, 398);
+            this.flowLayoutPanel1.TabIndex = 21;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(892, 457);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(137, 37);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Onayla";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1035, 457);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(137, 37);
+            this.button4.TabIndex = 23;
+            this.button4.Text = "Iptal Et";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // lblBasketPrice
+            // 
+            this.lblBasketPrice.AutoSize = true;
+            this.lblBasketPrice.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBasketPrice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblBasketPrice.Location = new System.Drawing.Point(1260, 464);
+            this.lblBasketPrice.Name = "lblBasketPrice";
+            this.lblBasketPrice.Size = new System.Drawing.Size(25, 30);
+            this.lblBasketPrice.TabIndex = 24;
+            this.lblBasketPrice.Text = "0";
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(103)))), ((int)(((byte)(122)))));
-            this.ClientSize = new System.Drawing.Size(917, 518);
+            this.ClientSize = new System.Drawing.Size(1408, 575);
+            this.Controls.Add(this.lblBasketPrice);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.lblProductInfo);
             this.Controls.Add(this.btnUpdateMMF);
@@ -289,5 +337,9 @@
         private Button btnUpdateMMF;
         private Label lblProductInfo;
         private Button addBtn;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Button button3;
+        private Button button4;
+        private Label lblBasketPrice;
     }
 }

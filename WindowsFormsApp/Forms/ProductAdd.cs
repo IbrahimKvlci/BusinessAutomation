@@ -17,6 +17,7 @@ using WindowsFormsApp.CommonClasses;
 using WindowsFormsApp.CommonClasses.Abstract;
 using WindowsFormsApp.CommonClasses.ImageTool.Abstract;
 using WindowsFormsApp.CommonClasses.ImageTool.Concrete;
+using WindowsFormsApp.Tools.Request;
 
 namespace WindowsFormsApp.Forms
 {
@@ -32,10 +33,10 @@ namespace WindowsFormsApp.Forms
         public ProductAdd()
         {
             InitializeComponent();
-            _iProductService = new ProductManager(new EfProductDal(), new MyWebClient(), new HtmlAgility());
-            _iBrandService =new BrandManager(new EfBrandDal());
-            _iCategoryService = new CategoryManager(new EfCategoryDal());
-            _iGetAllEntites = new GetAllEntites();
+            _iProductService = Form1._iProductService;
+            _iBrandService = Form1._iBrandService;
+            _iCategoryService = Form1._iCategoryService;
+            _iGetAllEntites = Form1._iGetAllEntites;
             _imageAdd = new ImageAdd();
         }
 
@@ -52,6 +53,39 @@ namespace WindowsFormsApp.Forms
 
         private void btnAddMMF_Click(object sender, EventArgs e)
         {
+            if (cbxCategoryMMF.SelectedValue == null && (cbxCategoryMMF.Text != null || cbxCategoryMMF.Text != ""))
+            {
+                int categoryId;
+                if (_iCategoryService.IsExist(cbxCategoryMMF.Text, out categoryId))
+                {
+                    cbxCategoryMMF.SelectedValue = categoryId;
+                }
+                else
+                {
+                    Category category = new Category { Name = cbxCategoryMMF.Text };
+                    _iCategoryService.Add(category);
+                    categoryId = category.Id;
+                    GetAllCategories();
+                    cbxCategoryMMF.SelectedValue = categoryId;
+                }
+            }
+            if (cbxBrandMMF.SelectedValue == null && (cbxBrandMMF.Text != null || cbxBrandMMF.Text != ""))
+            {
+                int brandId;
+                if (_iBrandService.IsExist(cbxBrandMMF.Text, out brandId))
+                {
+                    cbxBrandMMF.SelectedValue = brandId;
+                }
+                else
+                {
+                    Brand brand = new Brand { Name = cbxBrandMMF.Text };
+                    _iBrandService.Add(brand);
+                    brandId = brand.Id;
+                    GetAllBrands();
+                    cbxBrandMMF.SelectedValue = brandId;
+                }
+            }
+
             Product product = new Product {
                 Barcode = tbxBarkodAdd.Text,
                 Name = tbxTitleMMF.Text,
@@ -62,8 +96,9 @@ namespace WindowsFormsApp.Forms
                 ImageUrl=pbxImageMMF.ImageLocation
 
             };
-
-            _iProductService.Add(product);
+            
+            var request= _iProductService.Add(product);
+            Request.ShowRequest(request);
         }
 
         void GetAllCategories()

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.cbxBrand = new System.Windows.Forms.ComboBox();
             this.btnApplyBrand = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Controls.Add(this.cbxBrand);
             this.panel1.Controls.Add(this.btnApplyBrand);
             this.panel1.Controls.Add(this.label5);
@@ -76,6 +78,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(889, 557);
             this.panel1.TabIndex = 0;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(3, 479);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(883, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar1.TabIndex = 17;
+            this.progressBar1.UseWaitCursor = true;
+            this.progressBar1.Visible = false;
             // 
             // cbxBrand
             // 
@@ -297,5 +309,6 @@
         private NumericUpDown nmValueAll;
         private ComboBox cbxSaleAll;
         private Label label1;
+        private ProgressBar progressBar1;
     }
 }

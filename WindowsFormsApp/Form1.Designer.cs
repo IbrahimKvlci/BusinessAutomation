@@ -50,7 +50,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 111);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(125, 596);
+            this.panel2.Size = new System.Drawing.Size(125, 590);
             this.panel2.TabIndex = 1;
             // 
             // btnSetSalePanel
@@ -129,7 +129,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1080, 111);
+            this.panel1.Size = new System.Drawing.Size(1115, 111);
             this.panel1.TabIndex = 0;
             // 
             // pnlMain
@@ -137,7 +137,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(125, 111);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(955, 596);
+            this.pnlMain.Size = new System.Drawing.Size(990, 590);
             this.pnlMain.TabIndex = 2;
             this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
             // 
@@ -146,13 +146,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(103)))), ((int)(((byte)(122)))));
-            this.ClientSize = new System.Drawing.Size(1080, 707);
+            this.ClientSize = new System.Drawing.Size(1115, 701);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

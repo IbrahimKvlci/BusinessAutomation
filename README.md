@@ -1,7 +1,7 @@
 # Business Automation
 ## About
 
-  This application allows to manage your products.
+  This application allows you to manage your products.
 
 ## Features
 

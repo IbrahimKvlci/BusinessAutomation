@@ -16,11 +16,10 @@
 
   
 
-![Screenshot_6](https://github.com/IbrahimKvlci/KavalciKirtasiyeAutomation/assets/110342285/2e858e69-97dd-4f14-8de9-08e6788dea88)
+![Screenshot_6](https://github.com/IbrahimKvlci/BusinessAutomation/assets/110342285/f45e5441-8ba5-4532-90c3-8eb5f63b8b2d)
 
-![Screenshot_1](https://github.com/IbrahimKvlci/KavalciKirtasiyeAutomation/assets/110342285/b04e1cba-baab-4eef-b8b6-33ddaa9a8385)
-![Screenshot_2](https://github.com/IbrahimKvlci/KavalciKirtasiyeAutomation/assets/110342285/b0970b75-fc3b-4ed4-8879-f563df8cc359)
-![Screenshot_3](https://github.com/IbrahimKvlci/KavalciKirtasiyeAutomation/assets/110342285/05a0d872-f91f-4ae9-84cb-c057db3db6ea)
-![Screenshot_5](https://github.com/IbrahimKvlci/KavalciKirtasiyeAutomation/assets/110342285/531e2f78-58f0-4af4-9c03-8de8819cc53b)
-![Screenshot_4](https://github.com/IbrahimKvlci/KavalciKirtasiyeAutomation/assets/110342285/04380557-6c1d-4999-9a3c-e7b03c01c344)
-
+![Screenshot_1](https://github.com/IbrahimKvlci/BusinessAutomation/assets/110342285/08da4a43-bb8e-4d01-9868-b841ac2afca6)
+![Screenshot_2](https://github.com/IbrahimKvlci/BusinessAutomation/assets/110342285/4461e73e-6e8e-4d3f-82cb-3bf69177a055)
+![Screenshot_3](https://github.com/IbrahimKvlci/BusinessAutomation/assets/110342285/86734910-2548-479c-ab7a-cc27c6d21ec4)
+![Screenshot_5](https://github.com/IbrahimKvlci/BusinessAutomation/assets/110342285/2839d27d-ac91-484d-98c7-37f77c6d34bd)
+![Screenshot_4](https://github.com/IbrahimKvlci/BusinessAutomation/assets/110342285/ff2060c4-6158-4274-ac90-22ae70f91cce)
